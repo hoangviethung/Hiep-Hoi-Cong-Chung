@@ -68,7 +68,7 @@ const initElementButtonBackSubMenu = () => {
 // INIT Smooth Scrollbar
 const initSmoothScrollbar = () => {
 	var Scrollbar = window.Scrollbar;
-	// Scrollbar.init(document.querySelector('#body-smoothScroll'));
+	Scrollbar.init(document.querySelector('#body-smoothScroll'));
 }
 
 // ACTIONS LOGIN PAGE
@@ -205,6 +205,7 @@ const activeLanguage = () => {
 // SHOW BACK TO TOP
 const showBackToTop = () => {
 	$(window).scroll(function () {
+		console.log(1);
 		if ($(this).scrollTop() > 800) {
 			$('#back_to_top').addClass('show');
 		} else {

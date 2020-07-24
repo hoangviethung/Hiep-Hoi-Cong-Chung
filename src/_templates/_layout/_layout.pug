@@ -17,12 +17,13 @@ html(lang="vi")
 		block loading
 		block header
 			include _header.pug
-		block banner,breadcrumb
-		main
-			block main
-			#js-page-verify(class=bodyClass hidden)
-		block footer
-			include _footer.pug
+		section#body-smoothScroll
+			block banner,breadcrumb
+			main
+				block main
+				#js-page-verify(class=bodyClass hidden)
+			block footer
+				include _footer.pug
 		#back_to_top
 			img.lazyload.blur-up(data-src="./assets/icons/back-top-top.svg", alt="BACK-TO-TOP")
 		#check_login
@@ -33,5 +34,4 @@ html(lang="vi")
 		script(src='https://apis.google.com/js/platform.js?onload=onLoadCallback')
 		script(type="text/javascript", src="./js/core.min.js")
 		script(type="text/javascript", src="./js/main.min.js")
-		
 		block scripts
